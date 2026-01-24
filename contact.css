@@ -3,7 +3,7 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:sans-serif;
+
 }
 body{
     background:#f5f6fa;
@@ -11,7 +11,7 @@ body{
     padding-top:50px;
 }
 
-/*    NAVBAR (same as home) */
+/*    NAVBAR (same as home navbar) */
 nav{
     position:fixed;
     top:0;
@@ -24,9 +24,23 @@ nav{
     justify-content:space-between;
     padding:0 20px;
     z-index:1000;
+
+    font-family: 'Poppins', sans-serif;   
+    font-weight: 300;
 }
-.nav-logo img{
-    height:35px;
+/*  LOGO  */
+.nav-logo {
+    height: 100%;      /* = 50px, set by nav */
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    z-index: 1;
+}
+.nav-logo img {
+    height: 100%;      /* keep it smaller than 50px */
+    width: auto;
+    object-fit: contain;
+    border-radius: 50%;
 }
 .redirects{
     display:flex;
@@ -69,7 +83,7 @@ nav{
     #nav-toggle:checked ~ .hamburger span:nth-child(3){transform:rotate(-45deg) translate(6px,-6px);}
 }
 
-/*CONTACT SECTION  */
+/* Contact Section */
 .contact-section{
     max-width:1000px;
     margin:40px auto;
@@ -166,4 +180,23 @@ nav{
 @media(max-width:768px){
     .address-map{
         grid-template-columns:1fr;}
+}
+
+.nav-logout {
+    margin-left: 20px;        /* space from logo */
+}
+
+.nav-logout a {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: rgb(240, 255, 255);  /* red button */
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.nav-logout a:hover {
+    background-color: lightblue;
 }

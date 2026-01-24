@@ -1,5 +1,5 @@
 /* BASE */
-*{margin:0;padding:0;box-sizing:border-box;font-family:sans-serif;}
+*{margin:0;padding:0;box-sizing:border-box;}
 body{background:#f5f6fa;color:#333;padding-top:50px;}
 
 /* NAVBAR (same as home)*/
@@ -14,9 +14,23 @@ nav{
     align-items:center;
     justify-content:space-between;
     padding:0 20px;z-index:1000;
+
+    font-family: 'Poppins', sans-serif;   
+    font-weight: 300;
 }
-.nav-logo img{
-    height: 1em;
+/* ----------  LOGO  ---------- */
+.nav-logo {
+    height: 100%;      /* = 50px, set by nav */
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    z-index: 1;
+}
+.nav-logo img {
+    height: 100%;      /* keep it smaller than 50px */
+    width: auto;
+    object-fit: contain;
+    border-radius: 50%;
 }
 .redirects{
     display:flex;
@@ -195,4 +209,23 @@ input[type="radio"]:checked + .slot{
 /* RESPONSIVE*/
 @media(max-width:768px){
     .appointment-wrapper{grid-template-columns:1fr;}
+}
+
+.nav-logout {
+    margin-left: 20px;        /* space from logo */
+}
+
+.nav-logout a {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: rgb(240, 255, 255);  /* red button */
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.nav-logout a:hover {
+    background-color: lightblue;
 }
