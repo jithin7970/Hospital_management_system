@@ -13,7 +13,11 @@ nav{
 .nav-logo img{height:35px;}
 .redirects{display:flex;gap:25px;}
 .redirects a{color:#fff;text-decoration:none;font-size:18px;transition:.3s;}
-.redirects a:hover{font-weight:700;text-shadow:0 0 2px #fff;}
+.redirects a:hover{
+    font-weight: 300;           /* bold on hover */
+    text-shadow: 0 0 2px #fff;
+    text-decoration: underline;
+}
 
 #nav-toggle{display:none;}
 .hamburger{display:none;flex-direction:column;width:26px;height:22px;cursor:pointer;}
@@ -47,4 +51,24 @@ nav{
 .info .fee{font-weight:700;margin:10px 0;}
 
 .btn{display:inline-block;margin-top:10px;padding:8px 18px;background:#2323c8;color:#fff;text-decoration:none;border-radius:20px;font-size:.9rem;transition:.3s;}
-.btn:hover{background:#131383;}
+.btn:hover{
+    background:#131383;
+}
+
+
+
+
+
+
+
+
+
+
+
+.doc-card img {
+  width: 100%;
+
+  border-radius: 12px 12px 0 0;
+  height: 220px;        /* fixed card image height */
+  object-fit: contain; 
+}
