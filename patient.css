@@ -1,13 +1,13 @@
-/*=====  BASE  =====*/
+/* BASE */
 *{margin:0;padding:0;box-sizing:border-box;font-family:sans-serif;}
 body{background:#f5f6fa;color:#333;padding-top:50px;}
 
-/*=====  NAVBAR (same as home)  =====*/
+/* NAVBAR (same as home) */
 nav{position:fixed;top:0;left:0;width:100%;height:50px;background:linear-gradient(177.6deg,rgba(20,0,113,1)15.3%,rgba(1,0,62,1)91.3%);display:flex;align-items:center;justify-content:space-between;padding:0 20px;z-index:1000;}
-.nav-logo img{height:35px;}
+.nav-logo img{height:1em;}
 .redirects{display:flex;gap:25px;}
 .redirects a{color:#fff;text-decoration:none;font-size:18px;transition:.3s;}
-.redirects a:hover{font-weight:700;text-shadow:0 0 2px #fff;}
+.redirects a:hover{font-weight:300;text-shadow:0 0 2px #fff;text-decoration: underline;}
 #nav-toggle{display:none;}
 .hamburger{display:none;flex-direction:column;width:26px;height:22px;cursor:pointer;}
 .hamburger span{height:3px;background:#fff;margin-bottom:5px;border-radius:2px;transition:.3s;}
@@ -20,7 +20,7 @@ nav{position:fixed;top:0;left:0;width:100%;height:50px;background:linear-gradien
     #nav-toggle:checked ~ .hamburger span:nth-child(3){transform:rotate(-45deg) translate(6px,-6px);}
 }
 
-/*=====  PACKAGES SECTION  =====*/
+/* PACKAGES SECTION */
 .packages-section{max-width:1000px;margin:40px auto;padding:0 20px;}
 .packages-section h1{text-align:center;margin-bottom:30px;font-size:2.2rem;color:#2c3e50;}
 
@@ -32,7 +32,7 @@ nav{position:fixed;top:0;left:0;width:100%;height:50px;background:linear-gradien
 .pkg-info .dept{font-weight:600;color:#2323c8;}
 .pkg-info .amount{font-weight:700;color:#e74c3c;}
 
-/*=====  ACTION BUTTONS  =====*/
+/* ACTION BUTTONS */
 .action-buttons{display:flex;justify-content:center;gap:20px;margin:40px 20px;flex-wrap:wrap;}
 .doc-btn,.next-btn{padding:12px 25px;border:none;border-radius:25px;font-size:16px;font-weight:600;cursor:pointer;transition:.3s;}
 .doc-btn{background:#6c757d;color:#fff;}
@@ -40,7 +40,7 @@ nav{position:fixed;top:0;left:0;width:100%;height:50px;background:linear-gradien
 .next-btn{background:#2323c8;color:#fff;text-decoration:none;text-align:center;}
 .next-btn:hover{background:#131383;}
 
-/*=====  RESPONSIVE  =====*/
+/*RESPONSIVE */
 @media(max-width:600px){
     .action-buttons{flex-direction:column;align-items:center;}
 }
