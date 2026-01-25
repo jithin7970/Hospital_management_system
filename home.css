@@ -85,27 +85,56 @@ nav{
 }
 
 /* ----------  MOBILE: ≤768px  ---------- */
+/* ----------  MOBILE FIXES  ---------- */
 @media(max-width:768px){
-    .hamburger{ display:flex; }          /* show burger */
-    .redirects{
-        position:fixed;
-        inset:50px 0 auto 0;             /* full-width below bar */
-        background:inherit;              /* same dark gradient */
-        flex-direction:column;
-        align-items:center;
-        padding:20px 0;
-        max-height:0;                    /* closed by default */
-        overflow:hidden;
-        transition:max-height .4s ease;
+    /* Force hamburger to be on top */
+    .hamburger {
+        display: flex !important;
+        position: absolute !important;
+        left: 20px !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        z-index: 1001 !important;
     }
-
-    /* open menu when checkbox is checked */
-    #nav-toggle:checked ~ .redirects{ max-height:400px; }
-
-    /* animate burger lines into X */
-    #nav-toggle:checked ~ .hamburger span:nth-child(1){ transform:rotate(45deg) translate(6px,6px); }
-    #nav-toggle:checked ~ .hamburger span:nth-child(2){ opacity:0; }
-    #nav-toggle:checked ~ .nav-toggle:checked ~ .hamburger span:nth-child(3){ transform:rotate(-45deg) translate(6px,-6px); }
+    
+    /* Hide redirects completely when closed */
+    .redirects {
+        position: fixed !important;
+        top: 50px !important;
+        left: 0 !important;
+        right: 0 !important;
+        background: linear-gradient(177.6deg, rgba(20,0,113,1) 15.3%, rgba(1,0,62,1) 91.3%) !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        max-height: 0 !important;
+        overflow: hidden !important;
+        transition: max-height 0.4s ease !important;
+        z-index: 999 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    /* Show menu when checked */
+    #nav-toggle:checked ~ .redirects {
+        max-height: 400px !important;
+        padding: 20px 0 !important;
+    }
+    
+    /* Hide individual links outside menu */
+    .redirects a {
+        display: block !important;
+        width: 100% !important;
+        text-align: center !important;
+        padding: 10px !important;
+        margin: 0 !important;
+    }
+    
+    /* Ensure checkbox controls visibility */
+    #nav-toggle {
+        display: block !important;
+        position: absolute !important;
+        left: -9999px !important;
+    }
 }
 /* ----------  NAVBAR STAYS FIXED  ---------- */
 body{ padding-top:40px; } /* make room for fixed nav */
