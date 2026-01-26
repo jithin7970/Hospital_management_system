@@ -70,9 +70,6 @@ body{background:#f5f6fa;padding-top:50px;color:#333;}
 .doc-card{background:#fff;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.1);overflow:hidden;transition:.3s;}
 .doc-card:hover{transform:translateY(-5px);box-shadow:0 8px 20px rgba(0,0,0,.15);}
 
-.doc-card img{width:100%;height:200px;object-fit:cover; object-position: top;   /* <-- keeps heads at the top */
-    display: block;}
-
 .info{padding:15px 20px 20px;}
 .info h2{font-size:1.3rem;margin-bottom:6px;color:#2c3e50;}
 .info .dept{font-weight:600;color:#2323c8;margin-bottom:4px;}
